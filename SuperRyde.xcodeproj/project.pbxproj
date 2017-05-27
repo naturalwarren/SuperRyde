@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
+		80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* ViewController.swift */; };
+		80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A51EDA3851006F19C4 /* Main.storyboard */; };
+		80B662A91EDA3851006F19C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A81EDA3851006F19C4 /* Assets.xcassets */; };
+		80B662AC1EDA3851006F19C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */; };
+		80B662B71EDA3851006F19C4 /* SuperRydeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662B61EDA3851006F19C4 /* SuperRydeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80B662B31EDA3851006F19C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80B662961EDA3851006F19C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80B6629D1EDA3851006F19C4;
+			remoteInfo = SuperRyde;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80B662A31EDA3851006F19C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80B662A61EDA3851006F19C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80B662A81EDA3851006F19C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80B662AB1EDA3851006F19C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80B662AD1EDA3851006F19C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B662B21EDA3851006F19C4 /* SuperRydeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperRydeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B662B61EDA3851006F19C4 /* SuperRydeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperRydeTests.swift; sourceTree = "<group>"; };
+		80B662B81EDA3851006F19C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80B6629B1EDA3851006F19C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B662AF1EDA3851006F19C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80B662951EDA3851006F19C4 = {
+			isa = PBXGroup;
+			children = (
+				80B662A01EDA3851006F19C4 /* SuperRyde */,
+				80B662B51EDA3851006F19C4 /* SuperRydeTests */,
+				80B6629F1EDA3851006F19C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80B6629F1EDA3851006F19C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80B6629E1EDA3851006F19C4 /* SuperRyde.app */,
+				80B662B21EDA3851006F19C4 /* SuperRydeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80B662A01EDA3851006F19C4 /* SuperRyde */ = {
+			isa = PBXGroup;
+			children = (
+				80B662A11EDA3851006F19C4 /* AppDelegate.swift */,
+				80B662A31EDA3851006F19C4 /* ViewController.swift */,
+				80B662A51EDA3851006F19C4 /* Main.storyboard */,
+				80B662A81EDA3851006F19C4 /* Assets.xcassets */,
+				80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */,
+				80B662AD1EDA3851006F19C4 /* Info.plist */,
+			);
+			path = SuperRyde;
+			sourceTree = "<group>";
+		};
+		80B662B51EDA3851006F19C4 /* SuperRydeTests */ = {
+			isa = PBXGroup;
+			children = (
+				80B662B61EDA3851006F19C4 /* SuperRydeTests.swift */,
+				80B662B81EDA3851006F19C4 /* Info.plist */,
+			);
+			path = SuperRydeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80B6629D1EDA3851006F19C4 /* SuperRyde */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B662BB1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRyde" */;
+			buildPhases = (
+				80B6629A1EDA3851006F19C4 /* Sources */,
+				80B6629B1EDA3851006F19C4 /* Frameworks */,
+				80B6629C1EDA3851006F19C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperRyde;
+			productName = SuperRyde;
+			productReference = 80B6629E1EDA3851006F19C4 /* SuperRyde.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80B662B11EDA3851006F19C4 /* SuperRydeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B662BE1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRydeTests" */;
+			buildPhases = (
+				80B662AE1EDA3851006F19C4 /* Sources */,
+				80B662AF1EDA3851006F19C4 /* Frameworks */,
+				80B662B01EDA3851006F19C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80B662B41EDA3851006F19C4 /* PBXTargetDependency */,
+			);
+			name = SuperRydeTests;
+			productName = SuperRydeTests;
+			productReference = 80B662B21EDA3851006F19C4 /* SuperRydeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80B662961EDA3851006F19C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Warren Smith";
+				TargetAttributes = {
+					80B6629D1EDA3851006F19C4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					80B662B11EDA3851006F19C4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 80B6629D1EDA3851006F19C4;
+					};
+				};
+			};
+			buildConfigurationList = 80B662991EDA3851006F19C4 /* Build configuration list for PBXProject "SuperRyde" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80B662951EDA3851006F19C4;
+			productRefGroup = 80B6629F1EDA3851006F19C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80B6629D1EDA3851006F19C4 /* SuperRyde */,
+				80B662B11EDA3851006F19C4 /* SuperRydeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80B6629C1EDA3851006F19C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B662AC1EDA3851006F19C4 /* LaunchScreen.storyboard in Resources */,
+				80B662A91EDA3851006F19C4 /* Assets.xcassets in Resources */,
+				80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B662B01EDA3851006F19C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80B6629A1EDA3851006F19C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */,
+				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B662AE1EDA3851006F19C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B662B71EDA3851006F19C4 /* SuperRydeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80B662B41EDA3851006F19C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80B6629D1EDA3851006F19C4 /* SuperRyde */;
+			targetProxy = 80B662B31EDA3851006F19C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80B662A51EDA3851006F19C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80B662A61EDA3851006F19C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80B662AB1EDA3851006F19C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80B662B91EDA3851006F19C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80B662BA1EDA3851006F19C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80B662BC1EDA3851006F19C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SuperRyde/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naturalwarren.SuperRyde;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		80B662BD1EDA3851006F19C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SuperRyde/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naturalwarren.SuperRyde;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		80B662BF1EDA3851006F19C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SuperRydeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naturalwarren.SuperRydeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperRyde.app/SuperRyde";
+			};
+			name = Debug;
+		};
+		80B662C01EDA3851006F19C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SuperRydeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naturalwarren.SuperRydeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperRyde.app/SuperRyde";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80B662991EDA3851006F19C4 /* Build configuration list for PBXProject "SuperRyde" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B662B91EDA3851006F19C4 /* Debug */,
+				80B662BA1EDA3851006F19C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B662BB1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRyde" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B662BC1EDA3851006F19C4 /* Debug */,
+				80B662BD1EDA3851006F19C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80B662BE1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRydeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B662BF1EDA3851006F19C4 /* Debug */,
+				80B662C01EDA3851006F19C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80B662961EDA3851006F19C4 /* Project object */;
+}
