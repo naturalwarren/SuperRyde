@@ -8,27 +8,26 @@
 
 import UIKit
 import Alamofire
+import AlamofireObjectMapper
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let request = PriceEstimateRequest(startLatitude: "37.7752315",
+                                           startLongitude: "-122.418075",
+                                           endLatitude: "37.7752415",
+                                           endLongitude: "-122.518075")
+        
+        Alamofire.request(request.url(), headers: UberApi.HEADERS).responseObject { (response: DataResponse<PriceEstimateResponse>) in
+            let priceEstimate = response.result.value
 
-        let headers: HTTPHeaders = [
-            "Authorization": "Token jgLiCncpw6g1bopAahrf3R9LaN2MBIh124Tg6XdG",
-            "Accept-Language": "en_US",
-            "Content-Type": "application/json"
-        ]
-
-        Alamofire.request("https://api.uber.com/v1.2/estimates/price?start_latitude=37.7752315"
-            + "&start_longitude=-122.418075"
-            + "&end_latitude=37.7752415"
-            + "&end_longitude=-122.518075", headers:headers).responseJSON { response in
-            print(response.request)
-            print(response.response)
-            print(response.data)
-            print(response.result)
+            if let prices = priceEstimate?.prices {
+                for price in prices {
+                    print("Name: " + price.displayName + " Estimate: " + price.estimate)
+                }
+            }
         }
     }
 
@@ -36,7 +35,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

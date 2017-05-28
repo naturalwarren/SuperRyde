@@ -8,6 +8,7 @@ target 'SuperRyde' do
 
   # Pods for SuperRyde
   pod 'Alamofire', '~> 4.4'
+  pod 'AlamofireObjectMapper', '~> 4.0'
 
   target 'SuperRydeTests' do
     inherit! :search_paths

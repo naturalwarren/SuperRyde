@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */; };
+		80951FF41EDB6A2600E66F3D /* UberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF31EDB6A2600E66F3D /* UberApi.swift */; };
+		80951FF61EDB6C8400E66F3D /* PriceEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */; };
 		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
 		80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* ViewController.swift */; };
 		80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A51EDA3851006F19C4 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		3CB647CB6FBA558AC226F6DA /* Pods_SuperRydeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperRydeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B99D1D1D01BF0E0D48CCCA1 /* Pods-SuperRyde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRyde.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRyde/Pods-SuperRyde.debug.xcconfig"; sourceTree = "<group>"; };
 		800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateRequest.swift; sourceTree = "<group>"; };
+		80951FF31EDB6A2600E66F3D /* UberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberApi.swift; sourceTree = "<group>"; };
+		80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateResponse.swift; sourceTree = "<group>"; };
 		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B662A31EDA3851006F19C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,12 +83,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		800CD49A1EDA4A7E00F63D5D /* Models */ = {
+		800CD49A1EDA4A7E00F63D5D /* Uber */ = {
 			isa = PBXGroup;
 			children = (
+				80951FF31EDB6A2600E66F3D /* UberApi.swift */,
 				800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */,
+				80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */,
 			);
-			name = Models;
+			name = Uber;
+			sourceTree = "<group>";
+		};
+		80951FF21EDB69FB00E66F3D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				80951FF71EDB7C9600E66F3D /* Lyft */,
+				800CD49A1EDA4A7E00F63D5D /* Uber */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		80951FF71EDB7C9600E66F3D /* Lyft */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Lyft;
 			sourceTree = "<group>";
 		};
 		80B662951EDA3851006F19C4 = {
@@ -110,7 +132,7 @@
 		80B662A01EDA3851006F19C4 /* SuperRyde */ = {
 			isa = PBXGroup;
 			children = (
-				800CD49A1EDA4A7E00F63D5D /* Models */,
+				80951FF21EDB69FB00E66F3D /* Network */,
 				80B662A11EDA3851006F19C4 /* AppDelegate.swift */,
 				80B662A31EDA3851006F19C4 /* ViewController.swift */,
 				80B662A51EDA3851006F19C4 /* Main.storyboard */,
@@ -341,6 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80951FF41EDB6A2600E66F3D /* UberApi.swift in Sources */,
+				80951FF61EDB6C8400E66F3D /* PriceEstimateResponse.swift in Sources */,
 				80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */,
 				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
 				800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */,
