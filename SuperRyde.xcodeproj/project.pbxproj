@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */; };
 		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
 		80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* ViewController.swift */; };
 		80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A51EDA3851006F19C4 /* Main.storyboard */; };
 		80B662A91EDA3851006F19C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A81EDA3851006F19C4 /* Assets.xcassets */; };
 		80B662AC1EDA3851006F19C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */; };
 		80B662B71EDA3851006F19C4 /* SuperRydeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662B61EDA3851006F19C4 /* SuperRydeTests.swift */; };
+		8255E9F2A0E171DFCE2234DD /* Pods_SuperRyde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4EAB5E48B0B837191E2B2A /* Pods_SuperRyde.framework */; };
+		EF2AAFA8BD70562392CCF168 /* Pods_SuperRydeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB647CB6FBA558AC226F6DA /* Pods_SuperRydeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F6987A0AAC2CE09208A06F1 /* Pods-SuperRydeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRydeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRydeTests/Pods-SuperRydeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CB647CB6FBA558AC226F6DA /* Pods_SuperRydeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperRydeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B99D1D1D01BF0E0D48CCCA1 /* Pods-SuperRyde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRyde.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRyde/Pods-SuperRyde.debug.xcconfig"; sourceTree = "<group>"; };
+		800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateRequest.swift; sourceTree = "<group>"; };
 		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B662A31EDA3851006F19C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +43,9 @@
 		80B662B21EDA3851006F19C4 /* SuperRydeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperRydeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662B61EDA3851006F19C4 /* SuperRydeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperRydeTests.swift; sourceTree = "<group>"; };
 		80B662B81EDA3851006F19C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB4EAB5E48B0B837191E2B2A /* Pods_SuperRyde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperRyde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1912388BE5FA3D517DAF10E /* Pods-SuperRyde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRyde.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRyde/Pods-SuperRyde.release.xcconfig"; sourceTree = "<group>"; };
+		E9CC85FBEC340CA4BD569E1D /* Pods-SuperRydeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRydeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRydeTests/Pods-SuperRydeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8255E9F2A0E171DFCE2234DD /* Pods_SuperRyde.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +61,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2AAFA8BD70562392CCF168 /* Pods_SuperRydeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73B0D0D78B937194092D4D1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B99D1D1D01BF0E0D48CCCA1 /* Pods-SuperRyde.debug.xcconfig */,
+				C1912388BE5FA3D517DAF10E /* Pods-SuperRyde.release.xcconfig */,
+				2F6987A0AAC2CE09208A06F1 /* Pods-SuperRydeTests.debug.xcconfig */,
+				E9CC85FBEC340CA4BD569E1D /* Pods-SuperRydeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		800CD49A1EDA4A7E00F63D5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		80B662951EDA3851006F19C4 = {
 			isa = PBXGroup;
 			children = (
 				80B662A01EDA3851006F19C4 /* SuperRyde */,
 				80B662B51EDA3851006F19C4 /* SuperRydeTests */,
 				80B6629F1EDA3851006F19C4 /* Products */,
+				73B0D0D78B937194092D4D1F /* Pods */,
+				E47407B8ABF84D61816CCA71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +110,7 @@
 		80B662A01EDA3851006F19C4 /* SuperRyde */ = {
 			isa = PBXGroup;
 			children = (
+				800CD49A1EDA4A7E00F63D5D /* Models */,
 				80B662A11EDA3851006F19C4 /* AppDelegate.swift */,
 				80B662A31EDA3851006F19C4 /* ViewController.swift */,
 				80B662A51EDA3851006F19C4 /* Main.storyboard */,
@@ -96,6 +130,15 @@
 			path = SuperRydeTests;
 			sourceTree = "<group>";
 		};
+		E47407B8ABF84D61816CCA71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB4EAB5E48B0B837191E2B2A /* Pods_SuperRyde.framework */,
+				3CB647CB6FBA558AC226F6DA /* Pods_SuperRydeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80B662BB1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRyde" */;
 			buildPhases = (
+				5BB4B8FBAD5D20D7EE155C7B /* [CP] Check Pods Manifest.lock */,
 				80B6629A1EDA3851006F19C4 /* Sources */,
 				80B6629B1EDA3851006F19C4 /* Frameworks */,
 				80B6629C1EDA3851006F19C4 /* Resources */,
+				C07B6C3869690123604CEE54 /* [CP] Embed Pods Frameworks */,
+				7A01D43535ECCF0114F81799 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80B662BE1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRydeTests" */;
 			buildPhases = (
+				ED98FB66ADF78FC375E3BDEE /* [CP] Check Pods Manifest.lock */,
 				80B662AE1EDA3851006F19C4 /* Sources */,
 				80B662AF1EDA3851006F19C4 /* Frameworks */,
 				80B662B01EDA3851006F19C4 /* Resources */,
+				5F8FB4B99821ABE02179BD68 /* [CP] Embed Pods Frameworks */,
+				B6439F5532F036E7E98D3195 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +243,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5BB4B8FBAD5D20D7EE155C7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F8FB4B99821ABE02179BD68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperRydeTests/Pods-SuperRydeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A01D43535ECCF0114F81799 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperRyde/Pods-SuperRyde-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6439F5532F036E7E98D3195 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperRydeTests/Pods-SuperRydeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C07B6C3869690123604CEE54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperRyde/Pods-SuperRyde-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED98FB66ADF78FC375E3BDEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		80B6629A1EDA3851006F19C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,6 +343,7 @@
 			files = (
 				80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */,
 				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
+				800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +480,7 @@
 		};
 		80B662BC1EDA3851006F19C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B99D1D1D01BF0E0D48CCCA1 /* Pods-SuperRyde.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperRyde/Info.plist;
@@ -349,6 +493,7 @@
 		};
 		80B662BD1EDA3851006F19C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1912388BE5FA3D517DAF10E /* Pods-SuperRyde.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperRyde/Info.plist;
@@ -361,6 +506,7 @@
 		};
 		80B662BF1EDA3851006F19C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6987A0AAC2CE09208A06F1 /* Pods-SuperRydeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -375,6 +521,7 @@
 		};
 		80B662C01EDA3851006F19C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9CC85FBEC340CA4BD569E1D /* Pods-SuperRydeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -406,6 +553,7 @@
 				80B662BD1EDA3851006F19C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80B662BE1EDA3851006F19C4 /* Build configuration list for PBXNativeTarget "SuperRydeTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +562,7 @@
 				80B662C01EDA3851006F19C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

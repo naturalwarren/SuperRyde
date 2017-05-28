@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        let headers: HTTPHeaders = [
+            "Authorization": "Token jgLiCncpw6g1bopAahrf3R9LaN2MBIh124Tg6XdG",
+            "Accept-Language": "en_US",
+            "Content-Type": "application/json"
+        ]
+
+        Alamofire.request("https://api.uber.com/v1.2/estimates/price?start_latitude=37.7752315"
+            + "&start_longitude=-122.418075"
+            + "&end_latitude=37.7752415"
+            + "&end_longitude=-122.518075", headers:headers).responseJSON { response in
+            print(response.request)
+            print(response.response)
+            print(response.data)
+            print(response.result)
+        }
     }
 
     override func didReceiveMemoryWarning() {
