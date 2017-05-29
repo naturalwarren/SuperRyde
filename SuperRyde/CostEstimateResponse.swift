@@ -22,15 +22,15 @@ class CostEstimateResponse: Mappable {
 class Estimate: Mappable {
     
     var displayName: String
-    var estimatedCostMaxCents: Double
-    var estimatedCostMinCents: Double
+    var estimatedMaxCost: Double
+    var estimatedMinCost: Double
     var currency: String
     
     required init?(map: Map) {
         do {
             try displayName = map.value("display_name")
-            try estimatedCostMaxCents = map.value("estimated_cost_cents_max")
-            try estimatedCostMinCents = map.value("estimated_cost_cents_min")
+            try estimatedMaxCost = map.value("estimated_cost_cents_max") / 100
+            try estimatedMinCost = map.value("estimated_cost_cents_min") / 100
             try currency = map.value("currency")
         } catch {
             return nil
@@ -38,9 +38,15 @@ class Estimate: Mappable {
     }
     
     func mapping(map: Map) {
+        let transform = TransformOf<Double, Double>(fromJSON: { (value: Double?) -> Double in
+            return value!/100
+        }, toJSON: { (value:Double?) -> Double in
+            return value! * 100
+        })
+        
         displayName <- map["display_name"]
-        estimatedCostMaxCents <- map["estimated_cost_cents_max"]
-        estimatedCostMinCents <- map["estimated_cost_cents_min"]
+        estimatedMaxCost <- (map["estimated_cost_cents_max"], transform)
+        estimatedMinCost <- (map["estimated_cost_cents_min"], transform)
         currency <- map["currency"]
     }
 }
