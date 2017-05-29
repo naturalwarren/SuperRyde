@@ -10,6 +10,11 @@
 		800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */; };
 		80951FF41EDB6A2600E66F3D /* UberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF31EDB6A2600E66F3D /* UberApi.swift */; };
 		80951FF61EDB6C8400E66F3D /* PriceEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */; };
+		80951FF91EDB81D800E66F3D /* LyftApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF81EDB81D800E66F3D /* LyftApi.swift */; };
+		80951FFB1EDB829000E66F3D /* CostEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFA1EDB829000E66F3D /* CostEstimateRequest.swift */; };
+		80951FFD1EDB845800E66F3D /* CostEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFC1EDB845800E66F3D /* CostEstimateResponse.swift */; };
+		80951FFF1EDB876F00E66F3D /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFE1EDB876F00E66F3D /* AuthenticationRequest.swift */; };
+		809520011EDB934600E66F3D /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809520001EDB934600E66F3D /* AuthenticationResponse.swift */; };
 		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
 		80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* ViewController.swift */; };
 		80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A51EDA3851006F19C4 /* Main.storyboard */; };
@@ -37,6 +42,11 @@
 		800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateRequest.swift; sourceTree = "<group>"; };
 		80951FF31EDB6A2600E66F3D /* UberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberApi.swift; sourceTree = "<group>"; };
 		80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateResponse.swift; sourceTree = "<group>"; };
+		80951FF81EDB81D800E66F3D /* LyftApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftApi.swift; sourceTree = "<group>"; };
+		80951FFA1EDB829000E66F3D /* CostEstimateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostEstimateRequest.swift; sourceTree = "<group>"; };
+		80951FFC1EDB845800E66F3D /* CostEstimateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostEstimateResponse.swift; sourceTree = "<group>"; };
+		80951FFE1EDB876F00E66F3D /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
+		809520001EDB934600E66F3D /* AuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
 		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B662A31EDA3851006F19C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +115,11 @@
 		80951FF71EDB7C9600E66F3D /* Lyft */ = {
 			isa = PBXGroup;
 			children = (
+				80951FF81EDB81D800E66F3D /* LyftApi.swift */,
+				80951FFA1EDB829000E66F3D /* CostEstimateRequest.swift */,
+				80951FFC1EDB845800E66F3D /* CostEstimateResponse.swift */,
+				80951FFE1EDB876F00E66F3D /* AuthenticationRequest.swift */,
+				809520001EDB934600E66F3D /* AuthenticationResponse.swift */,
 			);
 			name = Lyft;
 			sourceTree = "<group>";
@@ -364,10 +379,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				80951FF41EDB6A2600E66F3D /* UberApi.swift in Sources */,
+				80951FFD1EDB845800E66F3D /* CostEstimateResponse.swift in Sources */,
 				80951FF61EDB6C8400E66F3D /* PriceEstimateResponse.swift in Sources */,
+				80951FFB1EDB829000E66F3D /* CostEstimateRequest.swift in Sources */,
 				80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */,
 				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
 				800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */,
+				80951FFF1EDB876F00E66F3D /* AuthenticationRequest.swift in Sources */,
+				809520011EDB934600E66F3D /* AuthenticationResponse.swift in Sources */,
+				80951FF91EDB81D800E66F3D /* LyftApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
