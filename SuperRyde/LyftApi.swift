@@ -15,9 +15,4 @@ class LyftApi {
     static let PRE_AUTH_HEADERS = [
         "Content-Type": "application/json"
     ]
-    
-    func postAuthHeaders(accessToken: String) -> Dictionary<String, String> {
-        return ["Authorization" : "bearer " + accessToken]
-    }
-    
 }
