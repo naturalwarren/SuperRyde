@@ -10,6 +10,8 @@ target 'SuperRyde' do
   pod 'Alamofire', '~> 4.4'
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'SnapKit', '~> 3.2.0'
+  pod 'RxSwift', '~> 3.0'
+  pod 'RxCocoa', '~> 3.0'
 
   target 'SuperRydeTests' do
     inherit! :search_paths

@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */; };
+		800CD49C1EDA4A9300F63D5D /* PriceEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CD49B1EDA4A9300F63D5D /* PriceEstimate.swift */; };
+		804E42661EDCFBFC007F0BC3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */; };
 		80951FF41EDB6A2600E66F3D /* UberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF31EDB6A2600E66F3D /* UberApi.swift */; };
-		80951FF61EDB6C8400E66F3D /* PriceEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */; };
 		80951FF91EDB81D800E66F3D /* LyftApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF81EDB81D800E66F3D /* LyftApi.swift */; };
-		80951FFB1EDB829000E66F3D /* CostEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFA1EDB829000E66F3D /* CostEstimateRequest.swift */; };
-		80951FFD1EDB845800E66F3D /* CostEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFC1EDB845800E66F3D /* CostEstimateResponse.swift */; };
-		80951FFF1EDB876F00E66F3D /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFE1EDB876F00E66F3D /* AuthenticationRequest.swift */; };
-		809520011EDB934600E66F3D /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809520001EDB934600E66F3D /* AuthenticationResponse.swift */; };
+		80951FFB1EDB829000E66F3D /* CostEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFA1EDB829000E66F3D /* CostEstimate.swift */; };
+		80951FFF1EDB876F00E66F3D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFE1EDB876F00E66F3D /* Authentication.swift */; };
 		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
-		80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* ViewController.swift */; };
+		80B662A41EDA3851006F19C4 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* MapController.swift */; };
 		80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A51EDA3851006F19C4 /* Main.storyboard */; };
 		80B662A91EDA3851006F19C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A81EDA3851006F19C4 /* Assets.xcassets */; };
 		80B662AC1EDA3851006F19C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */; };
@@ -39,17 +37,15 @@
 		2F6987A0AAC2CE09208A06F1 /* Pods-SuperRydeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRydeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRydeTests/Pods-SuperRydeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CB647CB6FBA558AC226F6DA /* Pods_SuperRydeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperRydeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B99D1D1D01BF0E0D48CCCA1 /* Pods-SuperRyde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRyde.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperRyde/Pods-SuperRyde.debug.xcconfig"; sourceTree = "<group>"; };
-		800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateRequest.swift; sourceTree = "<group>"; };
+		800CD49B1EDA4A9300F63D5D /* PriceEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimate.swift; sourceTree = "<group>"; };
+		804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		80951FF31EDB6A2600E66F3D /* UberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberApi.swift; sourceTree = "<group>"; };
-		80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceEstimateResponse.swift; sourceTree = "<group>"; };
 		80951FF81EDB81D800E66F3D /* LyftApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftApi.swift; sourceTree = "<group>"; };
-		80951FFA1EDB829000E66F3D /* CostEstimateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostEstimateRequest.swift; sourceTree = "<group>"; };
-		80951FFC1EDB845800E66F3D /* CostEstimateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostEstimateResponse.swift; sourceTree = "<group>"; };
-		80951FFE1EDB876F00E66F3D /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
-		809520001EDB934600E66F3D /* AuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		80951FFA1EDB829000E66F3D /* CostEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostEstimate.swift; sourceTree = "<group>"; };
+		80951FFE1EDB876F00E66F3D /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80B662A31EDA3851006F19C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80B662A31EDA3851006F19C4 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		80B662A61EDA3851006F19C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80B662A81EDA3851006F19C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80B662AB1EDA3851006F19C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				80951FF31EDB6A2600E66F3D /* UberApi.swift */,
-				800CD49B1EDA4A9300F63D5D /* PriceEstimateRequest.swift */,
-				80951FF51EDB6C8400E66F3D /* PriceEstimateResponse.swift */,
+				800CD49B1EDA4A9300F63D5D /* PriceEstimate.swift */,
 			);
 			name = Uber;
 			sourceTree = "<group>";
@@ -116,10 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				80951FF81EDB81D800E66F3D /* LyftApi.swift */,
-				80951FFA1EDB829000E66F3D /* CostEstimateRequest.swift */,
-				80951FFC1EDB845800E66F3D /* CostEstimateResponse.swift */,
-				80951FFE1EDB876F00E66F3D /* AuthenticationRequest.swift */,
-				809520001EDB934600E66F3D /* AuthenticationResponse.swift */,
+				80951FFA1EDB829000E66F3D /* CostEstimate.swift */,
+				80951FFE1EDB876F00E66F3D /* Authentication.swift */,
 			);
 			name = Lyft;
 			sourceTree = "<group>";
@@ -149,7 +142,8 @@
 			children = (
 				80951FF21EDB69FB00E66F3D /* Network */,
 				80B662A11EDA3851006F19C4 /* AppDelegate.swift */,
-				80B662A31EDA3851006F19C4 /* ViewController.swift */,
+				804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */,
+				80B662A31EDA3851006F19C4 /* MapController.swift */,
 				80B662A51EDA3851006F19C4 /* Main.storyboard */,
 				80B662A81EDA3851006F19C4 /* Assets.xcassets */,
 				80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */,
@@ -379,14 +373,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				80951FF41EDB6A2600E66F3D /* UberApi.swift in Sources */,
-				80951FFD1EDB845800E66F3D /* CostEstimateResponse.swift in Sources */,
-				80951FF61EDB6C8400E66F3D /* PriceEstimateResponse.swift in Sources */,
-				80951FFB1EDB829000E66F3D /* CostEstimateRequest.swift in Sources */,
-				80B662A41EDA3851006F19C4 /* ViewController.swift in Sources */,
+				80951FFB1EDB829000E66F3D /* CostEstimate.swift in Sources */,
+				80B662A41EDA3851006F19C4 /* MapController.swift in Sources */,
 				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
-				800CD49C1EDA4A9300F63D5D /* PriceEstimateRequest.swift in Sources */,
-				80951FFF1EDB876F00E66F3D /* AuthenticationRequest.swift in Sources */,
-				809520011EDB934600E66F3D /* AuthenticationResponse.swift in Sources */,
+				804E42661EDCFBFC007F0BC3 /* MapViewModel.swift in Sources */,
+				800CD49C1EDA4A9300F63D5D /* PriceEstimate.swift in Sources */,
+				80951FFF1EDB876F00E66F3D /* Authentication.swift in Sources */,
 				80951FF91EDB81D800E66F3D /* LyftApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

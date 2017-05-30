@@ -6,6 +6,8 @@
 //  Copyright © 2017 Warren Smith. All rights reserved.
 //
 
+import Alamofire
+import AlamofireObjectMapper
 import Foundation
 
 class UberApi {
@@ -16,4 +18,15 @@ class UberApi {
         "Accept-Language": "en_US",
         "Content-Type": "application/json"
     ]
+    
+    func loadPriceEstimate(request: PriceEstimateRequest) {
+        Alamofire.request(request.url(), headers: UberApi.HEADERS).responseObject { (response: DataResponse<PriceEstimateResponse>) in
+            let priceEstimate = response.result.value
+            if let prices = priceEstimate?.prices {
+                for price in prices {
+                    print("Name: " + price.displayName + " Estimate: " + price.estimate)
+                }
+            }
+        }
+    }
 }
