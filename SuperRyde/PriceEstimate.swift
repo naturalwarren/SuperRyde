@@ -43,6 +43,7 @@ class PriceEstimateResponse : Mappable {
 }
 
 class Price: Mappable {
+    
     var displayName: String
     var distance: Double
     var highEstimate: Double

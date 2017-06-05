@@ -28,7 +28,7 @@ class LyftApi {
                     if let value = response.result.value {
                         single(.success(value.accessToken))
                     }
-                    
+                    // What to do for failure cases?
             }
             return Disposables.create {
                 request.cancel()

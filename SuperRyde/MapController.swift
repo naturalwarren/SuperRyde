@@ -27,6 +27,19 @@ class MapController: UIViewController {
                                                endLatitude: 37.7752415,
                                                endLongitude: -122.518075)
         uberApi.loadPriceEstimate(request: uberRequest)
+            .subscribeOn(MainScheduler.instance)
+            .subscribe { event in
+                switch event {
+                case .success(let priceEstimateResponse):
+                    if let prices = priceEstimateResponse.prices {
+                        for price in prices {
+                            print("\(price.displayName) \(price.estimate)")
+                        }
+                    }
+                case .error(let error):
+                    print("Error: ", error)
+                }
+        }.addDisposableTo(disposeBag)
         
         let lyftRequest = CostEstimateRequest(startLatitude: 37.7752315,
                                               startLongitude: -122.418075,
@@ -51,7 +64,7 @@ class MapController: UIViewController {
                 case .success(let costEstimateResponse):
                     if let estimates = costEstimateResponse.estimates {
                         for estimate in estimates {
-                            print("Name: \(estimate.displayName) Estimate: \(estimate.estimatedMinCost)-\(estimate.estimatedMaxCost)")
+                            print("\(estimate.displayName) \(estimate.estimatedMinCost)-\(estimate.estimatedMaxCost)")
                         }
                     }
                 case .error(let error):
