@@ -10,11 +10,14 @@ import UIKit
 
 import SnapKit
 import MapKit
+import RxSwift
 
 class MapController: UIViewController {
-
+    
+    var lyftAuthToken = String()
     let uberApi = UberApi()
     let lyftApi = LyftApi()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,33 @@ class MapController: UIViewController {
                                               startLongitude: -122.418075,
                                               endLatitude: 37.7752415,
                                               endLongitude: -122.518075)
-        lyftApi.loadCostEstimate(request: lyftRequest)
+        lyftApi.authenticate()
+            .subscribeOn(MainScheduler.instance)
+            .subscribe { event in
+                switch event {
+                case .success(let token):
+                    print("Token: ", token)
+                    self.lyftAuthToken = token
+                case .error(let error):
+                    print("Error:", error)
+                }
+            }.addDisposableTo(disposeBag)
+        
+        lyftApi.loadCostEstimate(token: lyftAuthToken, request: lyftRequest)
+            .subscribeOn(MainScheduler.instance)
+            .subscribe { event in
+                switch event {
+                case .success(let costEstimateResponse):
+                    if let estimates = costEstimateResponse.estimates {
+                        for estimate in estimates {
+                            print("Name: \(estimate.displayName) Estimate: \(estimate.estimatedMinCost)-\(estimate.estimatedMaxCost)")
+                        }
+                    }
+                case .error(let error):
+                    print("Error: ", error)
+                }
+            }.addDisposableTo(disposeBag)
+        
         
         // Create MapViewModel using CostEstimareResponse and PriceEstimateResponse
         // Subscribe to ViewModel and update the View with each item
@@ -44,9 +73,9 @@ class MapController: UIViewController {
             make.height.equalTo(self.view)
             make.center.equalTo(self.view)
         }
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
