@@ -49,6 +49,8 @@ class Estimate: Mappable {
     var estimatedMinCost: Double
     var currency: String
     
+    /* We actualy don't want to set properties here, it results in them being set twice. How do we get around this
+       without making everything optional? */
     required init?(map: Map) {
         do {
             try displayName = map.value("display_name")

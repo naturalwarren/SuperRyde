@@ -47,24 +47,17 @@ class MapController: UIViewController {
                                               endLongitude: -122.518075)
         lyftApi.authenticate()
             .subscribeOn(MainScheduler.instance)
-            .subscribe { event in
-                switch event {
-                case .success(let token):
-                    print("Token: ", token)
-                    self.lyftAuthToken = token
-                case .error(let error):
-                    print("Error:", error)
-                }
-            }.addDisposableTo(disposeBag)
-        
-        lyftApi.loadCostEstimate(token: lyftAuthToken, request: lyftRequest)
+            .flatMap({ (token) -> Single<CostEstimateResponse> in
+                self.lyftAuthToken = token
+                return self.lyftApi.loadCostEstimate(token: token, request: lyftRequest)
+            })
             .subscribeOn(MainScheduler.instance)
             .subscribe { event in
                 switch event {
                 case .success(let costEstimateResponse):
                     if let estimates = costEstimateResponse.estimates {
                         for estimate in estimates {
-                            print("\(estimate.displayName) \(estimate.estimatedMinCost)-\(estimate.estimatedMaxCost)")
+                            print("\(estimate.displayName) $\(estimate.estimatedMinCost/100)-\(estimate.estimatedMaxCost/100)")
                         }
                     }
                 case .error(let error):
@@ -72,8 +65,7 @@ class MapController: UIViewController {
                 }
             }.addDisposableTo(disposeBag)
         
-        
-        // Create MapViewModel using CostEstimareResponse and PriceEstimateResponse
+        // Create MapViewModel using CostEstimateResponse and PriceEstimateResponse
         // Subscribe to ViewModel and update the View with each item
         
         let superview = self.view
