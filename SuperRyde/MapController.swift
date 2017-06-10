@@ -22,26 +22,26 @@ class MapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //        mapViewModel.costEstimate()
-        //            .subscribe { event in
-        //                switch event {
-        //                case .next(let estimate):
-        //                    print(estimate.displayName)
-        //                default:
-        //                    print("Error")
-        //                }
-        //        }
-        //        .addDisposableTo(disposeBag)
-        //
-        //        mapViewModel.priceEstimate()
-        //            .subscribe { event in
-        //                switch event {
-        //                case .next(let price):
-        //                    print(price.displayName)
-        //                default:
-        //                    print("Error")
-        //                }
-        //        }.addDisposableTo(disposeBag)
+        mapViewModel.costEstimate(request: CostEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
+            .subscribe { event in
+                switch event {
+                case .next(let estimate):
+                    print(estimate.displayName)
+                default:
+                    print("Error")
+                }
+            }
+            .addDisposableTo(disposeBag)
+
+        mapViewModel.priceEstimate(request: PriceEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
+            .subscribe { event in
+                switch event {
+                case .next(let price):
+                    print(price.displayName)
+                default:
+                    print("Error")
+                }
+            }.addDisposableTo(disposeBag)
 
         let mapKitView = MKMapView()
         let textField = UITextField()

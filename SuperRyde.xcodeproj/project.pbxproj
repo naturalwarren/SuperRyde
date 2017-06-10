@@ -147,8 +147,8 @@
 				80B662A31EDA3851006F19C4 /* MapController.swift */,
 				804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */,
 				80ABCDC71EE7964000D05D83 /* LocationManager.swift */,
-				80B662A51EDA3851006F19C4 /* Main.storyboard */,
 				80B662A81EDA3851006F19C4 /* Assets.xcassets */,
+				80B662A51EDA3851006F19C4 /* Main.storyboard */,
 				80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */,
 				80B662AD1EDA3851006F19C4 /* Info.plist */,
 			);

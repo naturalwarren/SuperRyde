@@ -25,13 +25,10 @@ class MapViewModel {
         self.uberApi = uberApi
     }
 
-    func costEstimate() -> Observable<Estimate> {
+    func costEstimate(request: CostEstimateRequest) -> Observable<Estimate> {
         lyftApi.authenticate()
             .flatMap({ token -> Single<CostEstimateResponse> in
-                return self.lyftApi.loadCostEstimate(token: token, request: CostEstimateRequest(startLat: 37.7752315,
-                                                                                                startLong: -122.418075,
-                                                                                                endLat: 37.7752415,
-                                                                                                endLong: -122.518075))
+                return self.lyftApi.loadCostEstimate(token: token, request: request)
             })
             .subscribe { event in
                 switch event {
@@ -48,11 +45,8 @@ class MapViewModel {
         return estimateObservable
     }
 
-    func priceEstimate() -> Observable<Price> {
-        uberApi.loadPriceEstimate(request: PriceEstimateRequest(startLat: 37.7752315,
-                                                                startLong: -122.418075,
-                                                                endLat: 37.7752415,
-                                                                endLong: -122.518075))
+    func priceEstimate(request: PriceEstimateRequest) -> Observable<Price> {
+        uberApi.loadPriceEstimate(request: request)
             .subscribe { event in
                 switch event {
                 case .success(let priceEstimateResponse):
