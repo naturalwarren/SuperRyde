@@ -37,8 +37,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
     }
 
-    func getlocation() -> Observable<CLLocation> {
+    func getlocation() -> Observable<CLLocationCoordinate2D> {
         return locationSubject.asObservable()
+            .map { location in
+                return location.coordinate
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

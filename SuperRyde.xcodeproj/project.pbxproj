@@ -123,6 +123,14 @@
 			name = Lyft;
 			sourceTree = "<group>";
 		};
+		80962D951EEC952500D62F56 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				80ABCDC71EE7964000D05D83 /* LocationManager.swift */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		80B662951EDA3851006F19C4 = {
 			isa = PBXGroup;
 			children = (
@@ -146,13 +154,13 @@
 		80B662A01EDA3851006F19C4 /* SuperRyde */ = {
 			isa = PBXGroup;
 			children = (
+				80962D951EEC952500D62F56 /* Location */,
 				80951FF21EDB69FB00E66F3D /* Network */,
 				80B662A11EDA3851006F19C4 /* AppDelegate.swift */,
 				804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */,
 				80B662A31EDA3851006F19C4 /* MapController.swift */,
 				80962D931EEC933B00D62F56 /* MapView.swift */,
 				80962D911EEC921800D62F56 /* DestinationView.swift */,
-				80ABCDC71EE7964000D05D83 /* LocationManager.swift */,
 				80B662A81EDA3851006F19C4 /* Assets.xcassets */,
 				80B662A51EDA3851006F19C4 /* Main.storyboard */,
 				80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */,

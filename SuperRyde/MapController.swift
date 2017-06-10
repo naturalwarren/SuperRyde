@@ -42,30 +42,30 @@ class MapController: UIViewController {
             make.right.equalTo(superview).offset(-20)
         }
 
-//        mapViewModel.costEstimate(request: CostEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
-//            .subscribe { event in
-//                switch event {
-//                case .next(let estimate):
-//                    print(estimate.displayName)
-//                default:
-//                    print("Error")
-//                }
-//            }
-//            .addDisposableTo(disposeBag)
-//
-//        mapViewModel.priceEstimate(request: PriceEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
-//            .subscribe { event in
-//                switch event {
-//                case .next(let price):
-//                    print(price.displayName)
-//                default:
-//                    print("Error")
-//                }
-//            }.addDisposableTo(disposeBag)
+        mapViewModel.costEstimate(request: CostEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
+            .subscribe { event in
+                switch event {
+                case .next(let estimate):
+                    print(estimate.displayName)
+                default:
+                    print("Error")
+                }
+            }
+            .addDisposableTo(disposeBag)
+
+        mapViewModel.priceEstimate(request: PriceEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
+            .subscribe { event in
+                switch event {
+                case .next(let price):
+                    print(price.displayName)
+                default:
+                    print("Error")
+                }
+            }.addDisposableTo(disposeBag)
 
         locationManager.getlocation()
-            .subscribe { location in
-                let center = CLLocationCoordinate2D(latitude: location.element!.coordinate.latitude, longitude: location.element!.coordinate.longitude)
+            .subscribe { coordinate in
+                let center = CLLocationCoordinate2D(latitude: coordinate.element!.latitude, longitude: coordinate.element!.longitude)
                 let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
                 mapView.map.setRegion(region, animated: true)
             }.addDisposableTo(disposeBag)
