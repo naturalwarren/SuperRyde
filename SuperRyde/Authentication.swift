@@ -11,8 +11,8 @@ import ObjectMapper
 
 class AuthenticationRequest: Mappable {
 
-    var grantType: String
-    var scope:String
+    private var grantType: String
+    private var scope:String
     
     static let url = "https://api.lyft.com/oauth/token"
     static let user = "nW7JvtEUlIgw"

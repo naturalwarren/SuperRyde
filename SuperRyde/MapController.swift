@@ -11,6 +11,7 @@ import UIKit
 import SnapKit
 import MapKit
 import RxSwift
+import RxCocoa
 
 class MapController: UIViewController {
 
@@ -22,61 +23,52 @@ class MapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mapViewModel.costEstimate(request: CostEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
-            .subscribe { event in
-                switch event {
-                case .next(let estimate):
-                    print(estimate.displayName)
-                default:
-                    print("Error")
-                }
-            }
-            .addDisposableTo(disposeBag)
+        let superview = self.view!
+        let destinationView = DestinationView()
+        let mapView = MapView()
 
-        mapViewModel.priceEstimate(request: PriceEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
-            .subscribe { event in
-                switch event {
-                case .next(let price):
-                    print(price.displayName)
-                default:
-                    print("Error")
-                }
-            }.addDisposableTo(disposeBag)
+        superview.addSubview(mapView.map)
+        superview.addSubview(destinationView.textField)
 
-        let mapKitView = MKMapView()
-        let textField = UITextField()
-        textField.text = "Where to?"
-        textField.textAlignment = .center
-        textField.borderStyle = .roundedRect
-        textField.backgroundColor = UIColor.gray
-        textField.spellCheckingType = .no
-
-        let superview = self.view
-        superview?.addSubview(mapKitView)
-        superview?.addSubview(textField)
-
-        mapKitView.snp.makeConstraints { make -> Void in
+        mapView.map.snp.makeConstraints { make -> Void in
             make.width.equalTo(self.view)
             make.height.equalTo(self.view)
             make.center.equalTo(self.view)
         }
 
-        textField.snp.makeConstraints { make -> Void in
-            make.topMargin.equalTo(100)
-            make.width.equalTo(self.view)
+        destinationView.textField.snp.makeConstraints { make -> Void in
+            make.top.equalTo(superview).offset(100)
+            make.left.equalTo(superview).offset(20)
+            make.right.equalTo(superview).offset(-20)
         }
 
-        mapKitView.mapType = .standard
-        mapKitView.showsTraffic = true
-        mapKitView.showsUserLocation = true
+//        mapViewModel.costEstimate(request: CostEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
+//            .subscribe { event in
+//                switch event {
+//                case .next(let estimate):
+//                    print(estimate.displayName)
+//                default:
+//                    print("Error")
+//                }
+//            }
+//            .addDisposableTo(disposeBag)
+//
+//        mapViewModel.priceEstimate(request: PriceEstimateRequest(startLat: 37.7752315, startLong: -122.418075, endLat: 37.7752415, endLong: -122.518075))
+//            .subscribe { event in
+//                switch event {
+//                case .next(let price):
+//                    print(price.displayName)
+//                default:
+//                    print("Error")
+//                }
+//            }.addDisposableTo(disposeBag)
 
         locationManager.getlocation()
             .subscribe { location in
                 let center = CLLocationCoordinate2D(latitude: location.element!.coordinate.latitude, longitude: location.element!.coordinate.longitude)
                 let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-                mapKitView.setRegion(region, animated: true)
+                mapView.map.setRegion(region, animated: true)
             }.addDisposableTo(disposeBag)
-
     }
 
     override func didReceiveMemoryWarning() {
