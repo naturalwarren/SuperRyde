@@ -13,6 +13,7 @@
 		80951FF91EDB81D800E66F3D /* LyftApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FF81EDB81D800E66F3D /* LyftApi.swift */; };
 		80951FFB1EDB829000E66F3D /* CostEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFA1EDB829000E66F3D /* CostEstimate.swift */; };
 		80951FFF1EDB876F00E66F3D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFE1EDB876F00E66F3D /* Authentication.swift */; };
+		80ABCDC81EE7964000D05D83 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ABCDC71EE7964000D05D83 /* LocationManager.swift */; };
 		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
 		80B662A41EDA3851006F19C4 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* MapController.swift */; };
 		80B662A71EDA3851006F19C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B662A51EDA3851006F19C4 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		80951FF81EDB81D800E66F3D /* LyftApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftApi.swift; sourceTree = "<group>"; };
 		80951FFA1EDB829000E66F3D /* CostEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostEstimate.swift; sourceTree = "<group>"; };
 		80951FFE1EDB876F00E66F3D /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		80ABCDC71EE7964000D05D83 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B662A31EDA3851006F19C4 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -142,8 +144,9 @@
 			children = (
 				80951FF21EDB69FB00E66F3D /* Network */,
 				80B662A11EDA3851006F19C4 /* AppDelegate.swift */,
-				804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */,
 				80B662A31EDA3851006F19C4 /* MapController.swift */,
+				804E42651EDCFBFC007F0BC3 /* MapViewModel.swift */,
+				80ABCDC71EE7964000D05D83 /* LocationManager.swift */,
 				80B662A51EDA3851006F19C4 /* Main.storyboard */,
 				80B662A81EDA3851006F19C4 /* Assets.xcassets */,
 				80B662AA1EDA3851006F19C4 /* LaunchScreen.storyboard */,
@@ -376,6 +379,7 @@
 				80951FFB1EDB829000E66F3D /* CostEstimate.swift in Sources */,
 				80B662A41EDA3851006F19C4 /* MapController.swift in Sources */,
 				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
+				80ABCDC81EE7964000D05D83 /* LocationManager.swift in Sources */,
 				804E42661EDCFBFC007F0BC3 /* MapViewModel.swift in Sources */,
 				800CD49C1EDA4A9300F63D5D /* PriceEstimate.swift in Sources */,
 				80951FFF1EDB876F00E66F3D /* Authentication.swift in Sources */,

@@ -16,11 +16,11 @@ class PriceEstimateRequest {
     var endLatitude: Double
     var endLongitude: Double
 
-    init(startLatitude: Double, startLongitude: Double, endLatitude: Double, endLongitude: Double) {
-        self.startLatitude = startLatitude
-        self.startLongitude = startLongitude
-        self.endLatitude = endLatitude
-        self.endLongitude = endLongitude
+    init(startLat: Double, startLong: Double, endLat: Double, endLong: Double) {
+        self.startLatitude = startLat
+        self.startLongitude = startLong
+        self.endLatitude = endLat
+        self.endLongitude = endLong
     }
 
     func url() -> String {

@@ -7,24 +7,64 @@
 //
 
 import Foundation
+import RxSwift
 
 class MapViewModel {
-    var lyftEstimate: CostEstimateResponse
-    var uberEstimate: PriceEstimateResponse
-    
-    init(lyftEstimate: CostEstimateResponse, uberEstimate: PriceEstimateResponse) {
-        self.lyftEstimate = lyftEstimate
-        self.uberEstimate = uberEstimate
+
+    private var lyftApi: LyftApi
+    private var uberApi: UberApi
+
+    // Since we can't flatmap a Single to an Observable we subscribe and emit values to a Subject
+    // https://github.com/ReactiveX/RxSwift/issues/1206
+    private let estimateObservable = PublishSubject<Estimate>()
+    private let priceObservable = PublishSubject<Price>()
+    private let disposeBag = DisposeBag()
+
+    init(lyftApi: LyftApi, uberApi: UberApi) {
+        self.lyftApi = lyftApi
+        self.uberApi = uberApi
     }
-    
-    var lyftPrices: CostEstimateResponse {
-        return lyftEstimate
+
+    func costEstimate() -> Observable<Estimate> {
+        lyftApi.authenticate()
+            .flatMap({ token -> Single<CostEstimateResponse> in
+                return self.lyftApi.loadCostEstimate(token: token, request: CostEstimateRequest(startLat: 37.7752315,
+                                                                                                startLong: -122.418075,
+                                                                                                endLat: 37.7752415,
+                                                                                                endLong: -122.518075))
+            })
+            .subscribe { event in
+                switch event {
+                case .success(let costEstimateResponse):
+                    if let estimates = costEstimateResponse.estimates {
+                        for estimate in estimates {
+                            self.estimateObservable.onNext(estimate)
+                        }
+                    }
+                case .error(let error):
+                    self.estimateObservable.onError(error)
+                }
+            }.addDisposableTo(disposeBag)
+        return estimateObservable
     }
-    
-    var uberPrices: PriceEstimateResponse {
-        return uberEstimate
+
+    func priceEstimate() -> Observable<Price> {
+        uberApi.loadPriceEstimate(request: PriceEstimateRequest(startLat: 37.7752315,
+                                                                startLong: -122.418075,
+                                                                endLat: 37.7752415,
+                                                                endLong: -122.518075))
+            .subscribe { event in
+                switch event {
+                case .success(let priceEstimateResponse):
+                    if let prices = priceEstimateResponse.prices {
+                        for price in prices {
+                            self.priceObservable.onNext(price)
+                        }
+                    }
+                case .error(let error):
+                    self.priceObservable.onError(error)
+                }
+            }.addDisposableTo(disposeBag)
+        return priceObservable
     }
-    
-    // We have arrays coming back, how should the ViewModel handle this?
-    // Also, should there be one ViewModel per Response?
 }
