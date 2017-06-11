@@ -9,11 +9,12 @@
 import Foundation
 import MapKit
 import RxSwift
+import RxCocoa
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
 
     private let locationManager = CLLocationManager()
-    private let locationSubject = PublishSubject<CLLocation>()
+    private let locationSubject = ReplaySubject<CLLocation>.create(bufferSize: 1)
 
     override init() {
         super.init()
@@ -22,7 +23,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
-
             switch CLLocationManager.authorizationStatus() {
             case .notDetermined, .restricted, .denied:
                 print("Don't have app permission to access location.")
@@ -30,11 +30,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                 print("Have access to location.")
             }
 
-            locationManager.startUpdatingLocation()
+            locationManager.requestLocation()
         } else {
             print("Don't have access to location services enabled on device.")
         }
-
     }
 
     func getlocation() -> Observable<CLLocationCoordinate2D> {
