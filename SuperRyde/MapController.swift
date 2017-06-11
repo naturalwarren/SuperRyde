@@ -8,6 +8,7 @@
 
 import UIKit
 
+import GooglePlaces
 import SnapKit
 import MapKit
 import RxSwift
@@ -16,6 +17,8 @@ import RxCocoa
 class MapController: UIViewController {
 
     let mapViewModel = MapViewModel(lyftApi: LyftApi(), uberApi: UberApi())
+    let destinationView = DestinationView()
+    let mapView = MapView()
 
     let locationManager = LocationManager()
     let disposeBag = DisposeBag()
@@ -24,8 +27,6 @@ class MapController: UIViewController {
         super.viewDidLoad()
 
         let superview = self.view!
-        let destinationView = DestinationView()
-        let mapView = MapView()
 
         superview.addSubview(mapView.map)
         superview.addSubview(destinationView.textField)
@@ -46,7 +47,7 @@ class MapController: UIViewController {
             .subscribe { coordinate in
                 let center = CLLocationCoordinate2D(latitude: coordinate.element!.latitude, longitude: coordinate.element!.longitude)
                 let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-                mapView.map.setRegion(region, animated: true)
+                self.mapView.map.setRegion(region, animated: true)
             }.addDisposableTo(disposeBag)
 
 //        locationManager.getlocation()
@@ -84,12 +85,14 @@ class MapController: UIViewController {
 
         destinationView.textField
             .rx
-            .text
+            .controlEvent([.touchDown])
             .asObservable()
-            .debounce(1, scheduler: MainScheduler.instance)
             .subscribe { event in
-                print(event.element!!)
-        }.addDisposableTo(disposeBag)
+                let autocompleteController = GMSAutocompleteViewController()
+                autocompleteController.delegate = self
+                self.present(autocompleteController, animated: true, completion: nil)
+            }
+         .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,3 +101,26 @@ class MapController: UIViewController {
     }
 }
 
+extension MapController: GMSAutocompleteViewControllerDelegate {
+
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        destinationView.textField.text = place.name
+        dismiss(animated: true, completion: nil)
+    }
+
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}

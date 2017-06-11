@@ -15,7 +15,6 @@
 		80951FFF1EDB876F00E66F3D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80951FFE1EDB876F00E66F3D /* Authentication.swift */; };
 		80962D921EEC921800D62F56 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80962D911EEC921800D62F56 /* DestinationView.swift */; };
 		80962D941EEC933B00D62F56 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80962D931EEC933B00D62F56 /* MapView.swift */; };
-		80962D981EECD61200D62F56 /* PlacesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80962D971EECD61200D62F56 /* PlacesApi.swift */; };
 		80ABCDC81EE7964000D05D83 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ABCDC71EE7964000D05D83 /* LocationManager.swift */; };
 		80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A11EDA3851006F19C4 /* AppDelegate.swift */; };
 		80B662A41EDA3851006F19C4 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B662A31EDA3851006F19C4 /* MapController.swift */; };
@@ -49,7 +48,6 @@
 		80951FFE1EDB876F00E66F3D /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		80962D911EEC921800D62F56 /* DestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 		80962D931EEC933B00D62F56 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		80962D971EECD61200D62F56 /* PlacesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesApi.swift; sourceTree = "<group>"; };
 		80ABCDC71EE7964000D05D83 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		80B6629E1EDA3851006F19C4 /* SuperRyde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRyde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B662A11EDA3851006F19C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 		80951FF21EDB69FB00E66F3D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				80962D961EECD60800D62F56 /* Google */,
 				80951FF71EDB7C9600E66F3D /* Lyft */,
 				800CD49A1EDA4A7E00F63D5D /* Uber */,
 			);
@@ -132,14 +129,6 @@
 				80ABCDC71EE7964000D05D83 /* LocationManager.swift */,
 			);
 			name = Location;
-			sourceTree = "<group>";
-		};
-		80962D961EECD60800D62F56 /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				80962D971EECD61200D62F56 /* PlacesApi.swift */,
-			);
-			name = Google;
 			sourceTree = "<group>";
 		};
 		80B662951EDA3851006F19C4 = {
@@ -405,7 +394,6 @@
 				80B662A41EDA3851006F19C4 /* MapController.swift in Sources */,
 				80962D941EEC933B00D62F56 /* MapView.swift in Sources */,
 				80B662A21EDA3851006F19C4 /* AppDelegate.swift in Sources */,
-				80962D981EECD61200D62F56 /* PlacesApi.swift in Sources */,
 				80962D921EEC921800D62F56 /* DestinationView.swift in Sources */,
 				80ABCDC81EE7964000D05D83 /* LocationManager.swift in Sources */,
 				804E42661EDCFBFC007F0BC3 /* MapViewModel.swift in Sources */,
