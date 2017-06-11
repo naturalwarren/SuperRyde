@@ -49,38 +49,47 @@ class MapController: UIViewController {
                 mapView.map.setRegion(region, animated: true)
             }.addDisposableTo(disposeBag)
 
-        locationManager.getlocation()
-            .flatMap { coordinate -> Observable<Estimate> in
-                return self.mapViewModel.costEstimate(request: CostEstimateRequest(
-                    startLat: 37.7752315,
-                    startLong: -122.418075,
-                    endLat: 37.7752415,
-                    endLong: -122.518075))
-            } .subscribe { event in
-                switch event {
-                case .next(let estimate):
-                    print(estimate.displayName)
-                default:
-                    print("Error")
-                }
-            }
-            .addDisposableTo(disposeBag)
+//        locationManager.getlocation()
+//            .flatMap { coordinate -> Observable<Estimate> in
+//                return self.mapViewModel.costEstimate(request: CostEstimateRequest(
+//                    startLat: 37.7752315,
+//                    startLong: -122.418075,
+//                    endLat: 37.7752415,
+//                    endLong: -122.518075))
+//            } .subscribe { event in
+//                switch event {
+//                case .next(let estimate):
+//                    print(estimate.displayName)
+//                default:
+//                    print("Error")
+//                }
+//            }
+//            .addDisposableTo(disposeBag)
+//
+//        locationManager.getlocation()
+//            .flatMap { coordinate -> Observable<Price> in
+//                return self.mapViewModel.priceEstimate(request: PriceEstimateRequest(
+//                    startLat: 37.7752315,
+//                    startLong: -122.418075,
+//                    endLat: 37.7752415,
+//                    endLong: -122.518075))
+//            }.subscribe { event in
+//                switch event {
+//                case .next(let price):
+//                    print(price.displayName)
+//                default:
+//                    print("Error")
+//                }
+//            }.addDisposableTo(disposeBag)
 
-        locationManager.getlocation()
-            .flatMap { coordinate -> Observable<Price> in
-                return self.mapViewModel.priceEstimate(request: PriceEstimateRequest(
-                    startLat: 37.7752315,
-                    startLong: -122.418075,
-                    endLat: 37.7752415,
-                    endLong: -122.518075))
-            }.subscribe { event in
-                switch event {
-                case .next(let price):
-                    print(price.displayName)
-                default:
-                    print("Error")
-                }
-            }.addDisposableTo(disposeBag)
+        destinationView.textField
+            .rx
+            .text
+            .asObservable()
+            .debounce(1, scheduler: MainScheduler.instance)
+            .subscribe { event in
+                print(event.element!!)
+        }.addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,7 @@ target 'SuperRyde' do
   pod 'SnapKit', '~> 3.2.0'
   pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
+  pod 'GooglePlaces'
 
   target 'SuperRydeTests' do
     inherit! :search_paths
