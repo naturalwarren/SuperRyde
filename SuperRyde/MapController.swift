@@ -78,6 +78,11 @@ class MapController: UIViewController {
             directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: end!, addressDictionary: nil))
             directionRequest.transportType = .automobile
 
+            let destinationAnnotation = MKPointAnnotation()
+            destinationAnnotation.coordinate = end!
+            destinationAnnotation.title = self.destinationView.textField.text
+            self.mapView.map.showAnnotations([destinationAnnotation], animated: true)
+
             let directions = MKDirections(request: directionRequest)
 
             directions.calculate {
